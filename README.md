@@ -177,6 +177,18 @@ Seguimos o padrão Conventional Commits:
 - Backend: PEP 8
 - Frontend: ESLint + Prettier
 
-## 📄 Licença
+## ⚠️ Aviso de Direitos Autorais
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto foi desenvolvido como Trabalho de Graduação (TG) por Lucas da Silva Dellis e Leticia Camargo Marmo Rangel de Andrade em 2025.
+
+**Todos os direitos reservados.** É permitida apenas a visualização para fins acadêmicos e educacionais.
+
+É proibida a cópia, modificação, redistribuição ou uso comercial sem autorização prévia do autor.
+
+[... resto do conteúdo do README até a seção de Frontend ...]
+
+## 📝 Direitos Autorais e Uso
+
+Este projeto está protegido por direitos autorais. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes sobre as permissões e restrições de uso.
+
+Para solicitar permissões adicionais, entre em contato com os autores.
