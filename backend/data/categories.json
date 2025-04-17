@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Apresentação pessoal e experiências",
+    "module_title": "Entrevistas e Reuniões"
+  },
+  {
+    "name": "Discussão de projetos técnicos",
+    "module_title": "Entrevistas e Reuniões"
+  },
+  {
+    "name": "Negociação e argumentação",
+    "module_title": "Entrevistas e Reuniões"
+  },
+  {
+    "name": "Estruturas de controle",
+    "module_title": "Programação e Desenvolvimento"
+  },
+  {
+    "name": "Arquitetura de software",
+    "module_title": "Programação e Desenvolvimento"
+  },
+  {
+    "name": "APIs e integração",
+    "module_title": "Programação e Desenvolvimento"
+  },
+  {
+    "name": "Manuais de usuário",
+    "module_title": "Documentação Técnica"
+  },
+  {
+    "name": "Documentação de código",
+    "module_title": "Documentação Técnica"
+  },
+  {
+    "name": "Especificações técnicas",
+    "module_title": "Documentação Técnica"
+  },
+  {
+    "name": "Princípios básicos de segurança",
+    "module_title": "Segurança da Informação"
+  },
+  {
+    "name": "Ameaças e vulnerabilidades",
+    "module_title": "Segurança da Informação"
+  },
+  {
+    "name": "Práticas de proteção de dados",
+    "module_title": "Segurança da Informação"
+  }
+]

@@ -1,0 +1,1452 @@
+[
+  {
+    "question": "O que significa 'deadline'?",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Prazo final",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Reunião",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Folha de pagamento",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Demissão",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza a palavra 'meeting'.",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Contrato",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Relatório",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Reunião",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Proposta",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa 'team'?",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Equipe",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Plano",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Cliente",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza 'manager'.",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Funcionário",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Gerente",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Técnico",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Desenvolvedor",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa 'budget'?",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Fatura",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Imposto",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Orçamento",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Desconto",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza 'client'.",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Empresa",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Cliente",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Recurso",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa 'report'?",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Relatório",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Reunião",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Feedback",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Agenda",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza 'schedule'.",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Reunião",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Planejamento",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Orçamento",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Agenda",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "question": "O que significa 'feedback'?",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Plano",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Resposta",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Avaliação",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Pedido",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza 'project'.",
+    "level": 1,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Projeto",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Produto",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Programa",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Plano",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa a frase 'The deadline is next Monday'?",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "O prazo final é na próxima segunda-feira",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "A reunião é na segunda-feira",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "O projeto será entregue na segunda",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "A tarefa começa na segunda-feira",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual a melhor tradução para 'Our manager approved the budget.'?",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Nosso gerente criou o orçamento",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Nosso gerente recusou o relatório",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Nosso gerente aprovou o orçamento",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Nosso gerente discutiu o projeto",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que quer dizer 'She gave positive feedback'?",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Ela entregou o relatório",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Ela deu uma resposta negativa",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Ela saiu da reunião",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Ela deu uma avaliação positiva",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "question": "Traduza a frase: 'We scheduled the meeting for Friday.'",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Agendamos a reunião para sexta-feira",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Cancelamos a reunião de sexta-feira",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Mudamos a reunião para quarta-feira",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "A reunião de sexta foi adiada",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa 'Let's discuss the proposal'?",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Vamos aceitar a proposta",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Vamos ignorar a proposta",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Vamos discutir a proposta",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Vamos escrever a proposta",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza: 'They work as a team.'",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Eles trabalham como gerente",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Eles trabalham como equipe",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Eles trabalham como líderes",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Eles trabalham remotamente",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Escolha a melhor tradução: 'I will write the report today.'",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Vou ler o relatório hoje",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Vou escrever o relatório hoje",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Vou revisar o relatório hoje",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Vou enviar o relatório amanhã",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que quer dizer a frase 'He leads the project'?",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Ele segue o projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Ele ignora o projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Ele lidera o projeto",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Ele cancela o projeto",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza: 'This client is very important.'",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Esse gerente é muito importante",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Esse cliente é muito importante",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Esse produto é muito importante",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Esse relatório é muito importante",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa 'I have a meeting at 2 PM.'?",
+    "level": 2,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Tenho uma reunião às 2 da tarde",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Tenho uma entrevista às 2 da tarde",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Tenho um relatório às 2 da tarde",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Tenho um prazo às 2 da tarde",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Complete com a palavra correta: The _______ was sent to all departments yesterday.",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "project",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "report",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "feedback",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "schedule",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza para o português: 'We need to reduce the project budget.'",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Precisamos entregar o projeto no prazo",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Precisamos reduzir o orçamento do projeto",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Precisamos aumentar o número de funcionários",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Precisamos revisar o cronograma do projeto",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual das opções completa corretamente: The manager provided detailed ________.",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "feedback",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "meeting",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "schedule",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "client",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa a frase: 'She is responsible for the team schedule.'",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Ela é responsável pelo orçamento da equipe",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Ela lidera a equipe de projetos",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Ela é responsável pela agenda da equipe",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Ela trabalha com a equipe de clientes",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Escolha a melhor tradução: 'He submitted the final report this morning.'",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Ele aprovou o relatório final hoje de manhã",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Ele rejeitou o relatório final hoje",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Ele escreveu o orçamento final esta manhã",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Ele enviou o relatório final hoje de manhã",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "question": "Complete: The client asked for a copy of the ________.",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "schedule",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "meeting",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "proposal",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "budget",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Traduza: 'We will have a meeting to discuss the feedback.'",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Vamos cancelar a reunião sobre o feedback",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Vamos marcar uma reunião para apresentar o projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Teremos uma reunião para discutir o feedback",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Teremos uma reunião para aprovar o orçamento",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Complete com a opção correta: They are preparing a new ________ for the client.",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "deadline",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "proposal",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "schedule",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "feedback",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "O que significa a expressão: 'He was promoted to project manager.'",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Ele foi demitido do cargo de gerente de projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Ele foi promovido a gerente de projeto",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Ele recusou ser gerente de projeto",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Ele substituiu o cliente principal",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Complete com a melhor opção: Our ________ is to improve communication in the team.",
+    "level": 3,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "meeting",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "goal",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "schedule",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "report",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does the sentence 'This proposal outlines our financial strategy' mean?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "It describes the financial strategy",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "It rejects the financial report",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "It analyzes client performance",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "It compares budget plans",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does the sentence 'We need to align our goals with the client’s expectations' imply?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Impose goals on the client",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Ignore the client's input",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Match our goals to the client’s expectations",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Replace the client’s goals",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Translate: 'The report highlights key performance indicators (KPIs).'",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "It hides KPIs",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "It shows main performance indicators",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "It lists financial expenses",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "It sends a final message",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'Let’s review the client’s feedback before the final delivery' suggest?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Ignore client feedback",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Check feedback before final delivery",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Approve the client’s feedback",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Send feedback after delivery",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What happened if 'The meeting was rescheduled due to a conflict in the agenda'?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "The meeting was canceled",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "The meeting was moved because of a schedule issue",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "The meeting was extended",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "The agenda was modified",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does the sentence 'He delegated the task to the assistant' mean?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "He refused the task",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "He assigned the task to the assistant",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "He finished the task himself",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "He changed the task’s deadline",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Translate: 'This document must be reviewed and signed by the manager.'",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "It should be ignored",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "It should be edited",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "It should be checked and signed",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "It should be deleted",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'We had to postpone the project due to budget constraints' mean?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Cancel the project",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Finish the project early",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Delay the project due to financial limits",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Deliver with less people",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'The new policy will impact all departments' imply?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Only HR is affected",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "All departments are affected",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Managers will be replaced",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Teams will be merged",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'We need to set clear objectives for the next quarter' mean?",
+    "level": 4,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Delete next quarter’s objectives",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Adjust last month’s reports",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Define goals for the next quarter",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Cut the budget",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does the sentence 'We need to streamline our workflow to meet the upcoming deadline' mean?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "We should hire new employees",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "We need to simplify our process to meet the deadline",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "We should increase production speed",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "We need to extend the deadline",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Interpret the sentence: 'Please ensure all stakeholders are aligned before we proceed.'",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Contact only the suppliers",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Stakeholders must approve immediately",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Align all involved parties before moving on",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Pause the project for feedback",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'Let’s touch base next week to revisit our action items' imply?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Cancel next week’s tasks",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Schedule a meeting next week to review pending tasks",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Assign new roles this week",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Skip the next review",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What are 'bottlenecks' in 'The team faced several bottlenecks during the implementation phase'?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Opportunities",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Decisions",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Delays or obstacles",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "Final goals",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'He took ownership of the task and delivered it ahead of time' imply?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "He delayed the task",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "He completed it early with full responsibility",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "He assigned it to the manager",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "He started but didn’t finish it",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'The current workflow is not scalable' mean?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "The workflow is temporary",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "The workflow can't be expanded efficiently",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "The team is too slow",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "The process is offline",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Interpret: 'She coordinated cross-functional teams during the transition.'",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "She worked in sales",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "She led external teams",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "She managed teams from multiple departments",
+        "is_correct": true
+      },
+      {
+        "option_id": "d",
+        "text": "She tracked deliveries",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does 'Let’s circle back to this topic after the demo' mean?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Let’s skip this topic",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Let’s return to this topic later",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Let’s remove this topic",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Let’s send a report instead",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What does a 'data-driven approach' mean in business?",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Decide based on opinions",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Make decisions using data and analysis",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Reduce data sharing",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Ignore customer input",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Interpret the sentence: 'The company aims to enhance productivity through automation.'",
+    "level": 5,
+    "explanation": "",
+    "module_title": "Entrevistas e Reuniões",
+    "category_name": "Vocabulário corporativo",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Reduce production with automation",
+        "is_correct": false
+      },
+      {
+        "option_id": "b",
+        "text": "Improve output using automated systems",
+        "is_correct": true
+      },
+      {
+        "option_id": "c",
+        "text": "Replace all employees",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Sell automation services",
+        "is_correct": false
+      }
+    ]
+  }
+]
