@@ -185,8 +185,6 @@ Este projeto foi desenvolvido como Trabalho de Graduação (TG) por Lucas da Sil
 
 É proibida a cópia, modificação, redistribuição ou uso comercial sem autorização prévia do autor.
 
-[... resto do conteúdo do README até a seção de Frontend ...]
-
 ## 📝 Direitos Autorais e Uso
 
 Este projeto está protegido por direitos autorais. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes sobre as permissões e restrições de uso.
