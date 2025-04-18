@@ -24,17 +24,6 @@ const Navbar = () => {
             <Home className="h-5 w-5" />
             <span className="hidden sm:inline">Home</span>
           </Link>
-          
-          <Link 
-            to="/modules" 
-            className={`flex items-center gap-1 hover:text-linguatech-blue ${
-              isActive('/module') ? 'text-linguatech-blue' : 'text-gray-700'
-            }`}
-          >
-            <Layers className="h-5 w-5" />
-            <span className="hidden sm:inline">Módulos</span>
-          </Link>
-          
           <Link 
             to="/profile" 
             className={`flex items-center gap-1 hover:text-linguatech-blue ${

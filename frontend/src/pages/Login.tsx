@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import Navbar from "@/components/Navbar";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { loginUser } from "@/services";
 import { toast } from "sonner";
@@ -28,22 +29,12 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(response.user));
       localStorage.setItem("user_id", String(response.user.id));
       
-      // If we got a mock response, show a special message
-      if (response.token.includes('mock')) {
-        toast.info("Usando login simulado (API não disponível). Redirecionando...");
-      } else {
-        toast.success("Login realizado com sucesso!");
-      }
-      
-      // Dispatch a storage event so other components can react to the login
       window.dispatchEvent(new Event('storage'));
       
-      // Redirect to modules page after login
-      navigate("/modules");
+      navigate("/index");
     } catch (err) {
       let errorMessage = err instanceof Error ? err.message : "Falha ao fazer login. Por favor, tente novamente.";
       
-      // Check if it's a network error
       if (err instanceof TypeError && err.message.includes('fetch')) {
         errorMessage = "Não foi possível conectar ao servidor. Por favor, verifique se o backend está rodando.";
       }
