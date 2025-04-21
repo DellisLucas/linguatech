@@ -62,19 +62,16 @@ Retorne apenas o nome do nível mais adequado, em letras minúsculas.
 def definir_placement_level():
     data = request.get_json()
     user_id = data.get("user_id")
-    respostas = data.get("respostas")  # Lista de dicts: {question_id, level}
+    respostas = data.get("respostas")
 
     if not user_id or not respostas:
         return jsonify({"error": "Parâmetros obrigatórios ausentes."}), 400
-    data = request.get_json()
-    print("📥 Dados recebidos no backend:", data)
+
     try:
         prompt = gerar_prompt(respostas)
         model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content(prompt)
         nivel_texto = response.text.strip().lower()
-
-        print("🔍 Classificação IA:", nivel_texto)
 
         placement_level = nivel_map.get(nivel_texto)
         if placement_level is None:
@@ -84,15 +81,13 @@ def definir_placement_level():
         if not user:
             return jsonify({"error": "Usuário não encontrado."}), 404
 
-        user.placement_level = str(placement_level)  # ou int, dependendo da modelagem
+        user.placement_level = str(placement_level)
         db.session.commit()
 
         return jsonify({
-            "placement_level": placement_level,
+            "placement_level": str(placement_level),
             "nivel_texto": nivel_texto.capitalize()
         })
 
     except Exception as e:
-        import traceback
-        traceback.print_exc()
         return jsonify({"error": str(e)}), 500

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { loginUser } from "@/services";
+import { loginUser, User } from "@/services";
 import { toast } from "sonner";
 
 const Login = () => {
@@ -24,14 +23,20 @@ const Login = () => {
     try {
       const response = await loginUser(email, password);
       
-      // Store token and user in localStorage
+      // Armazena token e usuário no localStorage
       localStorage.setItem("token", response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
       localStorage.setItem("user_id", String(response.user.id));
       
       window.dispatchEvent(new Event('storage'));
       
-      navigate("/index");
+      // Verifica se o usuário tem nível definido
+      if (!response.user.placement_level || 
+          (typeof response.user.placement_level === 'string' ? response.user.placement_level.trim() === "" || response.user.placement_level === "0" : response.user.placement_level === null)) {
+        navigate("/quiznivelamento");
+      } else {
+        navigate("/index");
+      }
     } catch (err) {
       let errorMessage = err instanceof Error ? err.message : "Falha ao fazer login. Por favor, tente novamente.";
       

@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -20,8 +19,10 @@ import QuizNivelamento from "./pages/QuizNivelamento";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Check if user is already logged in
   const isLoggedIn = localStorage.getItem("token") !== null;
+  const user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")!) : null;
+  const hasPlacementLevel = user?.placement_level && 
+    (typeof user.placement_level === 'string' ? user.placement_level.trim() !== "" && user.placement_level !== "0" : user.placement_level !== null);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -30,31 +31,133 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            {/* Redirect from root to login or index */}
-            <Route path="/" element={isLoggedIn ? <Navigate to="/index" /> : <Navigate to="/login" />} />
+            {/* Rota raiz - redireciona com base no status de autenticação e nivelamento */}
+            <Route 
+              path="/" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Navigate to="/index" /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
             
-            {/* Auth routes - accessible without login */}
+            {/* Rotas públicas */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             
-            {/* Protected routes - redirect to login if not authenticated */}
-            <Route path="/index" element={isLoggedIn ? <Index /> : <Navigate to="/login" />} />
-            <Route path="/quiz" element={isLoggedIn ? <Quiz /> : <Navigate to="/login" />} />
-            <Route path="/quiznivelamento" element={isLoggedIn ? <QuizNivelamento /> : <Navigate to="/login" />} />
-            <Route path="/quiz/module/:moduleId/category/:categoryId" element={isLoggedIn ? <Quiz /> : <Navigate to="/login" />} />
-            <Route path="/quiz/lesson/:lessonId" element={isLoggedIn ? <Quiz /> : <Navigate to="/login" />} />
-            <Route path="/results" element={isLoggedIn ? <QuizResults /> : <Navigate to="/login" />} />
-            <Route path="/modules" element={isLoggedIn ? <Modules /> : <Navigate to="/login" />} />
-            <Route path="/module/:moduleId" element={isLoggedIn ? <ModuleDetail /> : <Navigate to="/login" />} />
-            <Route path="/module/:moduleId" element={isLoggedIn ? <ModuleDetail /> : <Navigate to="/login" />} />
-            <Route path="/modules/:moduleId/categories" element={isLoggedIn ? <Categories /> : <Navigate to="/login" />} />
-            <Route path="/module/:moduleId/category/:categoryId" element={isLoggedIn ? <ModuleDetail /> : <Navigate to="/login" />} />
-            <Route path="/questions/by-level" element={isLoggedIn ? <Quiz /> : <Navigate to="/login" />} />
-            <Route path="/lesson/:lessonId" element={isLoggedIn ? <Lesson /> : <Navigate to="/login" />} />
-            <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate to="/login" />} />
-            <Route path="/quiz/module/:moduleId/custom" element={isLoggedIn ? <Quiz /> : <Navigate to="/login" />} />
+            {/* Quiz de nivelamento - requer apenas login */}
+            <Route 
+              path="/quiznivelamento" 
+              element={isLoggedIn ? <QuizNivelamento /> : <Navigate to="/login" />} 
+            />
 
-            {/* Catch-all route */}
+            {/* Rotas protegidas - requerem login e nivelamento */}
+            <Route 
+              path="/index" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Index /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/quiz" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Quiz /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/quiz/module/:moduleId/category/:categoryId" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Quiz /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/quiz/lesson/:lessonId" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Quiz /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/results" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <QuizResults /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/modules" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Modules /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/module/:moduleId" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <ModuleDetail /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/modules/:moduleId/categories" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Categories /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/module/:moduleId/category/:categoryId" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <ModuleDetail /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/questions/by-level" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Quiz /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/lesson/:lessonId" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Lesson /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/profile" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Profile /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+            <Route 
+              path="/quiz/module/:moduleId/custom" 
+              element={
+                isLoggedIn 
+                  ? (hasPlacementLevel ? <Quiz /> : <Navigate to="/quiznivelamento" />)
+                  : <Navigate to="/login" />
+              } 
+            />
+
+            {/* Rota para página não encontrada */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

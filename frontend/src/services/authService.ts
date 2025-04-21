@@ -1,12 +1,12 @@
-
 import { handleApiError, API_BASE_URL } from './apiUtils';
 
 // User authentication interfaces
 export interface User {
-  id?: number;
-  name: string;
+  id: number;
+  username: string;
   email: string;
-  password?: string;
+  placement_level: string | null;
+  created_at: string;
 }
 
 export interface AuthResponse {

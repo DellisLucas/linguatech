@@ -1,4 +1,3 @@
-
 import { handleApiError, API_BASE_URL } from './apiUtils';
 
 export interface Question {
@@ -156,7 +155,7 @@ export const fetchAiExplanation = async (question: string, correctAnswer: string
 export const sendPlacementResult = async (
   userId: number,
   respostas: { question_id: number; level: number }[]
-): Promise<{ placement_level: number; nivel_texto: string }> => {
+): Promise<{ placement_level: string; nivel_texto: string }> => {
   try {
     console.log("🔍 Enviando para /api/nivelamento/resultado:", {
       user_id: userId,

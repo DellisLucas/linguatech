@@ -127,14 +127,20 @@ const QuizNivelamento = () => {
         const userId = Number(localStorage.getItem("user_id"));
         const result = await sendPlacementResult(userId, respostasCorretas);
   
+        // Atualiza o placement_level no localStorage
+        const user = JSON.parse(localStorage.getItem("user") || "{}");
+        user.placement_level = String(result.placement_level);
+        localStorage.setItem("user", JSON.stringify(user));
+  
+        // Dispara evento para notificar outros componentes
+        window.dispatchEvent(new Event('storage'));
+  
         toast({
           title: "Classificação definida!",
           description: `Seu nível: ${result.nivel_texto} (nível ${result.placement_level})`,
         });
   
-        navigate(
-          `/results?score=${respostasCorretas.length}&total=${questions.length}&placement=${result.placement_level}`
-        );
+        navigate("/index");
       } catch (error) {
         toast({
           title: "Erro ao classificar usuário",

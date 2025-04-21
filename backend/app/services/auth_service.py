@@ -52,12 +52,12 @@ def login_user(email, password):
     # Gera token
     token = generate_token(user.id)
     
+    # Garante que o placement_level seja uma string
+    user_data = user.to_dict()
+    user_data['placement_level'] = str(user_data['placement_level']) if user_data['placement_level'] is not None else "0"
+    
     return {
         'message': 'Login bem-sucedido',
         'token': token,
-        'user': {
-            'id': user.id,
-            'username': user.username,
-            'email': user.email
-        }
+        'user': user_data
     }, 200

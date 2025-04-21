@@ -9,7 +9,7 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    placement_level = db.Column(db.String)
+    placement_level = db.Column(db.String)  # Pode ser null inicialmente
 
     # Relacionamentos
     progress = db.relationship(
@@ -27,5 +27,6 @@ class User(db.Model):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'created_at': self.created_at.isoformat()
+            'created_at': self.created_at.isoformat(),
+            'placement_level': self.placement_level
         }
