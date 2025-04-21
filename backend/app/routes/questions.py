@@ -29,19 +29,30 @@ def get_quiz_questions():
 
 @questions_bp.route('/submit-quiz', methods=['POST'])
 def submit_quiz():
-    data = request.get_json()
-
-    if not data or 'answers' not in data:
-        return jsonify({'error': 'Dados incompletos'}), 400
-
-    user_id = get_authenticated_user()
-    answers = data.get('answers', [])
-    topic = data.get('topic')
-    module_id = data.get('moduleId', type=int)
-    category_id = data.get('categoryId', type=int)
-
-    result = evaluate_quiz(answers, user_id, module_id, category_id)
-    return jsonify(result), 200
+    try:
+        data = request.get_json()
+        if not data or 'answers' not in data:
+            return jsonify({'error': 'No answers provided'}), 400
+        
+        user_id = get_authenticated_user()
+        if not user_id:
+            return jsonify({'error': 'Unauthorized'}), 401
+        
+        answers = data['answers']
+        module_id = data.get('moduleId')
+        category_id = data.get('categoryId')
+        
+        # Converte para int se existir
+        if module_id is not None:
+            module_id = int(module_id)
+        if category_id is not None:
+            category_id = int(category_id)
+        
+        result = evaluate_quiz(answers, user_id, module_id, category_id)
+        return jsonify(result)
+    except Exception as e:
+        print(f"Erro ao processar quiz: {e}")
+        return jsonify({'error': str(e)}), 500
 
 @questions_bp.route('/category/<int:category_id>', methods=['GET'])
 def get_questions_by_category(category_id):

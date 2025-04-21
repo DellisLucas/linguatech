@@ -1,36 +1,43 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { fetchModuleCategories, ModuleCategory, fetchModuleDetails, ModuleDetail } from "@/services/modulesService";
+import { fetchModuleCategories, ModuleCategory, fetchModuleDetails, ModuleDetail, fetchCategoryProgress } from "@/services/modulesService";
 import { fetchQuestionsByLevel } from "@/services/quizService";
 import { BookOpen, Video, FileText, ArrowLeft } from "lucide-react";
+import CategoryCard from '../components/CategoryCard';
 
-
-const Categories = () => {
-  const { moduleId } = useParams();
+const Categories: React.FC = () => {
+  const { moduleId } = useParams<{ moduleId: string }>();
   const navigate = useNavigate();
-  const [categories, setCategories] = useState<ModuleCategory[]>([]);
   const [module, setModule] = useState<ModuleDetail | null>(null);
+  const [categories, setCategories] = useState<ModuleCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadData = async () => {
-      if (!moduleId) return;
-      
-      setLoading(true);
       try {
-        const [moduleData, categoriesData] = await Promise.all([
-          fetchModuleDetails(parseInt(moduleId)),
-          fetchModuleCategories(parseInt(moduleId))
-        ]);
-        
+        setLoading(true);
+        const moduleData = await fetchModuleDetails(Number(moduleId));
+        const categoriesData = await fetchModuleCategories(Number(moduleId));
         setModule(moduleData);
         setCategories(categoriesData);
-      } catch (error) {
-        console.error("Failed to load categories:", error);
+
+        // Atualiza o progresso de cada categoria
+        const updatedCategories = await Promise.all(
+          categoriesData.map(async (category) => {
+            const progress = await fetchCategoryProgress(Number(moduleId), category.id);
+            return { ...category, progress };
+          })
+        );
+        
+        setCategories(updatedCategories);
+      } catch (err) {
+        setError('Failed to load module data');
+        console.error(err);
       } finally {
         setLoading(false);
       }
@@ -65,6 +72,22 @@ const Categories = () => {
     );
   }
 
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
+        <main className="container mx-auto px-4 py-8">
+          <div className="flex flex-col items-center justify-center h-64 gap-4">
+            <p className="text-xl">{error}</p>
+            <Button onClick={() => navigate("/modules")}>
+              Voltar para Módulos
+            </Button>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
   if (!module) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -81,8 +104,6 @@ const Categories = () => {
     );
   }
 
-
-  
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -126,7 +147,7 @@ const Categories = () => {
       const quantity = parseInt(selected);
 
       const questions = await fetchQuestionsByLevel(
-        parseInt(moduleId),
+        Number(moduleId),
         userId,
         quantity // agora não é mais necessário enviar o nível
       );
@@ -150,36 +171,11 @@ const Categories = () => {
             <h2 className="mt-10 text-2xl font-bold mb-6">Categorias</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categories.map((category) => (
-                <Card 
-                  key={category.id} 
-                  className="cursor-pointer hover:shadow-md transition-shadow"
-                  onClick={() => navigate(`/module/${moduleId}/category/${category.id}`)}
-                >
-                  <CardHeader>
-                    <div className={`h-12 w-12 rounded-full flex items-center justify-center mb-4 ${category.bgColor || 'bg-linguatech-blue'}`}>
-                      {renderCategoryIcon(category.icon)}
-                    </div>
-                    <CardTitle>{category.name}</CardTitle>
-                    <CardDescription>{category.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-linguatech-blue rounded-full" 
-                        style={{ width: `${category.progress}%` }}
-                      ></div>
-                    </div>
-                    <div className="flex justify-between items-center mt-2">
-                      <span className="text-sm text-gray-500">Progresso</span>
-                      <span className="text-sm font-medium">{category.progress}%</span>
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button variant="ghost" className="text-linguatech-blue hover:bg-blue-700">
-                      Explorar categoria
-                    </Button>
-                  </CardFooter>
-                </Card>
+                <CategoryCard
+                  key={category.id}
+                  category={category}
+                  moduleId={Number(moduleId)}
+                />
               ))}
             </div>
           </div>

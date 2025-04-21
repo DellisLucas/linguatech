@@ -89,6 +89,27 @@ export const fetchModuleCategories = async (moduleId: number): Promise<ModuleCat
   }
 };
 
+// Fetch progress for a specific category
+export const fetchCategoryProgress = async (moduleId: number, categoryId: number): Promise<number> => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/modules/${moduleId}/categories/${categoryId}/progress`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch category progress');
+    }
+
+    const data = await response.json();
+    return data.progress || 0;
+  } catch (error) {
+    console.error('Error fetching category progress:', error);
+    return 0;
+  }
+};
+
 // Mark a lesson as completed
 export const markLessonAsCompleted = async (lessonId: number): Promise<{ success: boolean }> => {
   try {

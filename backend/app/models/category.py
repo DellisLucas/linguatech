@@ -22,6 +22,7 @@ class Category(db.Model):
         
         progress = 0
         if user_id:
+            # Busca o progresso do usuário para esta categoria
             progress_data = UserProgress.query.filter_by(
                 user_id=user_id,
                 module_id=self.module_id,

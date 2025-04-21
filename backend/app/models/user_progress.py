@@ -11,6 +11,7 @@ class UserProgress(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=True)
 
     progress = db.Column(db.Integer, default=0)  # Porcentagem (0-100)
+    total_quizzes = db.Column(db.Integer, default=0)  # Total de quizzes respondidos
     last_updated = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     # Relacionamentos (opcional, mas úteis para facilitar joins e queries com ORM)
@@ -27,5 +28,6 @@ class UserProgress(db.Model):
             'module_id': self.module_id,
             'category_id': self.category_id,
             'progress': self.progress,
+            'total_quizzes': self.total_quizzes,
             'last_updated': self.last_updated.isoformat()
         }

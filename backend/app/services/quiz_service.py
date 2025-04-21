@@ -36,21 +36,56 @@ def evaluate_quiz(answers, user_id=None, module_id=None, category_id=None):
             'feedback': 'Nenhuma resposta fornecida'
         }
     
-    for answer in answers:
-        question_id = answer['questionId']
-        selected_option = answer['selectedOption']
-        
-        # Verifica se a resposta está correta
-        option = Option.query.join(Question).filter(
-            Question.id == question_id,
-            Option.option_id == selected_option,
-            Option.is_correct == True
-        ).first()
-        
-        if option:
-            score += 1
+    # Dicionário para armazenar o progresso por categoria
+    category_progress = {}
     
-    # Calcula a porcentagem
+    for answer in answers:
+        try:
+            # Verifica se answer é um dicionário
+            if not isinstance(answer, dict):
+                print(f"Resposta inválida (não é um dicionário): {answer}")
+                continue
+                
+            question_id = answer.get('questionId')
+            selected_option = answer.get('selectedOption')
+            
+            if not question_id or not selected_option:
+                print(f"Resposta inválida (campos ausentes): {answer}")
+                continue
+            
+            # Busca a questão para obter a categoria
+            question = Question.query.get(question_id)
+            if not question:
+                print(f"Questão não encontrada: {question_id}")
+                continue
+                
+            # Inicializa o contador para a categoria se não existir
+            if question.category_id not in category_progress:
+                category_progress[question.category_id] = {
+                    'score': 0,
+                    'total': 0,
+                    'module_id': question.category.module_id
+                }
+            
+            # Incrementa o total de questões para a categoria
+            category_progress[question.category_id]['total'] += 1
+            
+            # Verifica se a resposta está correta
+            option = Option.query.join(Question).filter(
+                Question.id == question_id,
+                Option.option_id == selected_option,
+                Option.is_correct == True
+            ).first()
+            
+            if option:
+                score += 1
+                category_progress[question.category_id]['score'] += 1
+                
+        except Exception as e:
+            print(f"Erro ao processar resposta: {e}")
+            continue
+    
+    # Calcula a porcentagem geral
     percentage = round((score / total) * 100)
     
     # Gera feedback com base na porcentagem
@@ -62,9 +97,11 @@ def evaluate_quiz(answers, user_id=None, module_id=None, category_id=None):
     else:
         feedback = "Continue praticando. A prática leva à perfeição!"
     
-    # Atualiza o progresso do usuário se o usuário estiver autenticado
-    if user_id and (module_id or category_id):
-        update_user_progress(user_id, module_id, category_id, percentage)
+    # Atualiza o progresso para cada categoria
+    if user_id:
+        for cat_id, progress in category_progress.items():
+            cat_percentage = round((progress['score'] / progress['total']) * 100)
+            update_user_progress(user_id, progress['module_id'], cat_id, cat_percentage)
     
     return {
         'score': score,
@@ -82,15 +119,19 @@ def update_user_progress(user_id, module_id, category_id=None, percentage=0):
     ).first()
     
     if progress:
-        # Atualiza o progresso existente
-        progress.progress = max(progress.progress, percentage)  # Atualiza apenas se for maior que o atual
+        # Calcula a nova média considerando o progresso atual e o novo
+        total_quizzes = progress.total_quizzes + 1
+        new_progress = ((progress.progress * progress.total_quizzes) + percentage) / total_quizzes
+        progress.progress = round(new_progress)
+        progress.total_quizzes = total_quizzes
     else:
         # Cria um novo registro de progresso
         progress = UserProgress(
             user_id=user_id,
             module_id=module_id,
             category_id=category_id,
-            progress=percentage
+            progress=percentage,
+            total_quizzes=1
         )
         db.session.add(progress)
     

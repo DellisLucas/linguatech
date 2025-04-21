@@ -61,19 +61,25 @@ export const submitQuizAnswers = async (
   categoryId?: number
 ): Promise<QuizResult> => {
   try {
-    const url = `${API_BASE_URL}/submit-quiz`;
+    const url = `${API_BASE_URL}/questions/submit-quiz`;
+    
+    const body: any = { answers };
+    if (topic) body.topic = topic;
+    if (moduleId) body.moduleId = moduleId;
+    if (categoryId) body.categoryId = categoryId;
+    
+    const token = localStorage.getItem('token');
+    if (!token) {
+      throw new Error('Token de autenticação não encontrado');
+    }
     
     const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
       },
-      body: JSON.stringify({
-        answers,
-        topic,
-        moduleId,
-        categoryId
-      }),
+      body: JSON.stringify(body),
     });
     
     if (!response.ok) {
