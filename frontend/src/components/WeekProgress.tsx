@@ -1,18 +1,39 @@
+import { useEffect, useState } from 'react';
+import { getStreak } from '@/services/streakService';
 
 interface WeekProgressProps {
   currentStreak: number;
   record: number;
   weeklyProgress?: number[];
+  onUpdate?: () => void;
 }
 
 const daysOfWeek = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 
-const WeekProgress = ({ currentStreak, record, weeklyProgress = [] }: WeekProgressProps) => {
-  // If no weekly progress is provided, use a default pattern
-  const completedDays = weeklyProgress?.length 
-    ? daysOfWeek.map((_, index) => weeklyProgress[index] === 1 ? index : -1).filter(day => day !== -1)
-    : [0, 1, 2]; // Default completed days
-  
+const WeekProgress = ({ onUpdate }: WeekProgressProps) => {
+  const [streakData, setStreakData] = useState({
+    current_streak: 0,
+    record_streak: 0,
+    weekly_progress: [0, 0, 0, 0, 0, 0, 0]
+  });
+
+  useEffect(() => {
+    const loadStreakData = async () => {
+      try {
+        const data = await getStreak();
+        setStreakData(data);
+      } catch (error) {
+        console.error('Erro ao carregar dados de streak:', error);
+      }
+    };
+
+    loadStreakData();
+  }, [onUpdate]); // Recarrega quando onUpdate mudar
+
+  const completedDays = streakData.weekly_progress
+    .map((progress, index) => progress === 1 ? index : -1)
+    .filter(day => day !== -1);
+
   return (
     <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
       <div className="flex justify-between items-center mb-4">
@@ -27,11 +48,11 @@ const WeekProgress = ({ currentStreak, record, weeklyProgress = [] }: WeekProgre
       
       <div className="flex justify-between items-start">
         <div>
-          <h3 className="text-2xl font-bold">{currentStreak} dias</h3>
+          <h3 className="text-2xl font-bold">{streakData.current_streak} dias</h3>
           <p className="text-sm text-gray-500">Atual</p>
         </div>
         <div>
-          <h3 className="text-2xl font-bold">{record} dias</h3>
+          <h3 className="text-2xl font-bold">{streakData.record_streak} dias</h3>
           <p className="text-sm text-gray-500">Recorde</p>
         </div>
       </div>

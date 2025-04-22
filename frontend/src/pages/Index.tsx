@@ -5,38 +5,42 @@ import Navbar from "@/components/Navbar";
 import StatsCard from "@/components/StatsCard";
 import LearningCard from "@/components/LearningCard";
 import WeekProgress from "@/components/WeekProgress";
-import { getModules } from "@/services/modulesService";// Importando a função que busca os módulos da API
+import { getModules } from "@/services/modulesService";
+import { getStreak } from "@/services/streakService";
 
 const Index = () => {
   const navigate = useNavigate();
   const [modules, setModules] = useState<any[]>([]);
+  const [streakData, setStreakData] = useState({
+    current_streak: 0,
+    record_streak: 0,
+    weekly_progress: [0,0,0,0,0,0,0]
+  });
   const [userStats] = useState({
     studyTime: "45 min",
-    currentStreak: 3,
     completedLessons: "2/15",
     points: "320 XP"
   });
 
   useEffect(() => {
-    const fetchModules = async () => {
+    const fetchData = async () => {
       try {
-        const data = await getModules(); // Apenas aguarde os dados retornados
-  
-        if (Array.isArray(data)) {
-          setModules(data);
-        } else {
-          console.error("Dados inesperados da API:", data);
-          setModules([]);
+        // Busca módulos
+        const modulesData = await getModules();
+        if (Array.isArray(modulesData)) {
+          setModules(modulesData);
         }
+
+        // Busca dados do streak
+        const streak = await getStreak();
+        setStreakData(streak);
       } catch (error) {
-        console.error("Erro ao buscar módulos:", error);
-        setModules([]);
+        console.error("Erro ao buscar dados:", error);
       }
     };
-  
-    fetchModules();
+
+    fetchData();
   }, []);
-  
 
   const handleStartQuiz = (path: string) => {
     navigate(path);
@@ -61,7 +65,7 @@ const Index = () => {
           <StatsCard 
             icon={<Flame className="h-5 w-5" />} 
             label="Sequência Atual" 
-            value={`${userStats.currentStreak} dias`}
+            value={`${streakData.current_streak} dias`}
             trend={{ value: "+50% dos últimos 7 dias", isPositive: true }}
           />
           <StatsCard 
@@ -79,7 +83,6 @@ const Index = () => {
         
         <h2 className="text-2xl font-bold mb-6">Continue Aprendendo</h2>
         
-        {/* Learning Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           <LearningCard 
             title="Nivelamento" 
@@ -91,7 +94,11 @@ const Index = () => {
             description="Explore e aprimore suas habilidades com módulos focados em áreas essenciais de TI"
             onContinue={() => handleStartQuiz("/modules")}
           />
-          <WeekProgress currentStreak={userStats.currentStreak} record={7} />
+          <WeekProgress 
+            currentStreak={streakData.current_streak} 
+            record={streakData.record_streak}
+            weeklyProgress={streakData.weekly_progress}
+          />
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { fetchQuizQuestions, submitQuizAnswers } from "@/services";
 import { fetchAiExplanation, Question, sendPlacementResult } from "@/services/quizService";
+import { updateStreak } from "@/services/streakService";
 
 const Quiz = () => {
   const navigate = useNavigate();
@@ -158,6 +159,7 @@ const Quiz = () => {
         );
 
         navigate(`/results?score=${result.score}&total=${result.total}&percentage=${result.percentage}`);
+        await updateStreak();
       } catch (error) {
         console.error("Error submitting quiz:", error);
         navigate(`/results?score=${score}&total=${questions.length}`);
