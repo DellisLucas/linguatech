@@ -109,9 +109,9 @@ const Categories: React.FC = () => {
       <Navbar />
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-2 text-gray-500 mb-4 cursor-pointer" onClick={() => navigate("/modules")}>
+          <div className="flex items-center gap-2 text-gray-500 mb-4 cursor-pointer" onClick={() => navigate("/index")}>
             <ArrowLeft className="h-4 w-4" />
-            <span>Voltar para Módulos</span>
+            <span>Voltar para Home</span>
           </div>
           
           <div className="mb-8">

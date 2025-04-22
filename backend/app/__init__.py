@@ -28,6 +28,7 @@ def create_app(config_class=Config):
     from app.routes.leveling import placement_bp
     from app.routes.explainerAI import explainer_bp
     from app.routes.streak import streak_bp
+    from app.routes.user_answers import bp as user_answers_bp
 
 
     app.register_blueprint(explainer_bp)
@@ -37,6 +38,7 @@ def create_app(config_class=Config):
     app.register_blueprint(modules_bp, url_prefix='/api')
     app.register_blueprint(categories_bp, url_prefix='/api')
     app.register_blueprint(streak_bp)
+    app.register_blueprint(user_answers_bp, url_prefix='/api')
 
     @app.before_request
     def handle_options():

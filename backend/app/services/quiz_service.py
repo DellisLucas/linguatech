@@ -2,6 +2,7 @@ from app import db
 from app.models.question import Question, Option
 from app.models.user_progress import UserProgress
 from app.models.category import Category
+from app.models.user_answer import UserAnswer
 from sqlalchemy import or_
 
 def get_questions(topic=None, module_id=None, category_id=None):
@@ -77,9 +78,20 @@ def evaluate_quiz(answers, user_id=None, module_id=None, category_id=None):
                 Option.is_correct == True
             ).first()
             
-            if option:
+            is_correct = bool(option)
+            if is_correct:
                 score += 1
                 category_progress[question.category_id]['score'] += 1
+            
+            # Salva a resposta do usuário
+            if user_id:
+                user_answer = UserAnswer(
+                    user_id=user_id,
+                    question_id=question_id,
+                    answer=selected_option,
+                    is_correct=is_correct
+                )
+                db.session.add(user_answer)
                 
         except Exception as e:
             print(f"Erro ao processar resposta: {e}")
@@ -102,6 +114,10 @@ def evaluate_quiz(answers, user_id=None, module_id=None, category_id=None):
         for cat_id, progress in category_progress.items():
             cat_percentage = round((progress['score'] / progress['total']) * 100)
             update_user_progress(user_id, progress['module_id'], cat_id, cat_percentage)
+    
+    # Commit para salvar todas as respostas
+    if user_id:
+        db.session.commit()
     
     return {
         'score': score,

@@ -60,13 +60,11 @@ const Index = () => {
             label="Tempo de Estudo" 
             value={userStats.studyTime}
             subtext="Hoje"
-            trend={{ value: "+12% dos últimos 7 dias", isPositive: true }}
           />
           <StatsCard 
             icon={<Flame className="h-5 w-5" />} 
             label="Sequência Atual" 
             value={`${streakData.current_streak} dias`}
-            trend={{ value: "+50% dos últimos 7 dias", isPositive: true }}
           />
           <StatsCard 
             icon={<CheckCircle className="h-5 w-5" />} 
@@ -77,7 +75,6 @@ const Index = () => {
             icon={<Award className="h-5 w-5" />} 
             label="Pontos Acumulados" 
             value={userStats.points}
-            trend={{ value: "+8% dos últimos 7 dias", isPositive: true }}
           />
         </div>
         
