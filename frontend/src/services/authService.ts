@@ -1,4 +1,5 @@
 import { handleApiError, API_BASE_URL } from './apiUtils';
+import { RegisterUserData } from '@/types/user';
 
 // User authentication interfaces
 export interface User {
@@ -15,7 +16,7 @@ export interface AuthResponse {
 }
 
 // Register a new user
-export const registerUser = async (userData: User): Promise<AuthResponse> => {
+export const registerUser = async (userData: RegisterUserData): Promise<AuthResponse> => {
   try {
     console.log(`Attempting to register user at ${API_BASE_URL}/register`);
     

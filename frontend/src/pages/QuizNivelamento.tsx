@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { fetchPlacementQuestions } from "@/services/nivelamentoQuiz";
 import { fetchAiExplanation, Question, sendPlacementResult } from "@/services/quizService";
+import { updateStreak } from "@/services/streakService";
 
 const QuizNivelamento = () => {
   const navigate = useNavigate();
@@ -134,13 +135,19 @@ const QuizNivelamento = () => {
   
         // Dispara evento para notificar outros componentes
         window.dispatchEvent(new Event('storage'));
-  
+        
+        const score = respostasCorretas.length;
+        const total = questions.length;
+        const percentage = Math.round((score / total) * 100);
+        
+        navigate(`/results?score=${score}&total=${total}&percentage=${percentage}`);
+        await updateStreak();
+
         toast({
           title: "Classificação definida!",
           description: `Seu nível: ${result.nivel_texto} (nível ${result.placement_level})`,
         });
   
-        navigate("/index");
       } catch (error) {
         toast({
           title: "Erro ao classificar usuário",

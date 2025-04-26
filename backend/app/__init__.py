@@ -11,8 +11,15 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
-    # Atualizar CORS para usar a variável de ambiente
-    CORS(app, resources={r"/api/*": {"origins": app.config['FRONTEND_URL']}}, supports_credentials=True)
+    # Configuração do CORS para permitir múltiplas origens
+    CORS(app, resources={
+        r"/*": {  # Permite todas as rotas
+            "origins": "*",
+            "supports_credentials": True,
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+            "allow_headers": ["Content-Type", "Authorization", "Accept", "Origin"]
+        }
+    })
     
     db.init_app(app)
     migrate.init_app(app, db)
