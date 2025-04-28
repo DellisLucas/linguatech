@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Instalar dependências do sistema
-sudo apt install -y nginx python3-pip python3-venv nodejs npm
+sudo apt install -y nginx python3-pip python3-venv python3-full nodejs npm
 
 # Configurar Nginx
 sudo cp nginx.conf /etc/nginx/sites-available/default
@@ -22,8 +22,8 @@ sudo chown -R $USER:$USER venv
 source venv/bin/activate
 
 # Instalar dependências Python
-pip install -r requirements.txt
-pip install gunicorn
+pip install --break-system-packages -r requirements.txt
+pip install --break-system-packages gunicorn
 
 # Configurar variáveis de ambiente
 if [ ! -f .env ]; then
@@ -46,7 +46,7 @@ sudo systemctl start backend
 
 # Configurar frontend
 sudo mkdir -p /var/www/frontend
-sudo cp -r frontend/* /var/www/frontend/
+sudo cp -r /home/$USER/linguatech/frontend/* /var/www/frontend/
 cd /var/www/frontend
 
 # Configurar variáveis de ambiente do frontend
