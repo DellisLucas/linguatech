@@ -18,19 +18,27 @@ class Category(db.Model):
         Retorna um dicionário com os dados da categoria,
         incluindo o progresso do usuário, se fornecido.
         """
-        from app.models.user_progress import UserProgress
+        from app.models.question import Question
+        from app.models.user_answer import UserAnswer
+        from app import db
         
         progress = 0
         if user_id:
-            # Busca o progresso do usuário para esta categoria
-            progress_data = UserProgress.query.filter_by(
-                user_id=user_id,
-                module_id=self.module_id,
-                category_id=self.id
-            ).first()
-
-            if progress_data:
-                progress = progress_data.progress
+            # Busca todas as questões da categoria
+            total_questions = Question.query.filter_by(category_id=self.id).count()
+            
+            if total_questions > 0:
+                # Busca as questões que o usuário respondeu corretamente
+                correct_answers = UserAnswer.query.filter(
+                    UserAnswer.user_id == user_id,
+                    UserAnswer.is_correct == True,
+                    UserAnswer.question_id.in_(
+                        db.session.query(Question.id).filter_by(category_id=self.id)
+                    )
+                ).count()
+                
+                # Calcula o progresso como porcentagem
+                progress = round((correct_answers / total_questions) * 100)
 
         return {
             'id': self.id,

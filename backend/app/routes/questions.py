@@ -4,8 +4,10 @@ from app.models.category import Category
 from app.services.quiz_service import get_questions, evaluate_quiz
 from app.utils.jwt_utils import jwt
 import random
+from flask_sqlalchemy import SQLAlchemy
 
 questions_bp = Blueprint('questions', __name__, url_prefix='/api/questions')
+db = SQLAlchemy()
 
 def get_authenticated_user():
     auth_header = request.headers.get('Authorization')
@@ -76,29 +78,46 @@ def get_questions_by_level():
     if not all([user_id, module_id, quantity]):
         return jsonify({'error': 'Parâmetros ausentes'}), 400
 
-    # Buscar o usuário e seu nível
-    from app.models import User
-    user = User.query.get(user_id)
-
-    if not user or not user.placement_level:
-        return jsonify({'error': 'Usuário não encontrado ou sem nível definido'}), 404
-
-    level = int(user.placement_level)
-
     # Buscar categorias do módulo
     categories = Category.query.filter_by(module_id=module_id).all()
     category_ids = [cat.id for cat in categories]
 
-    # Buscar perguntas daquele nível
-    questions_query = Question.query.filter(
-        Question.category_id.in_(category_ids),
-        Question.level == level
-    ).all()
+    # Buscar IDs das questões que o usuário já respondeu corretamente
+    from app.models.user_answer import UserAnswer
+    answered_correctly = db.session.query(UserAnswer.question_id).filter(
+        UserAnswer.user_id == user_id,
+        UserAnswer.is_correct == True
+    ).subquery()
 
-    if not questions_query:
-        return jsonify([]), 200
+    # Buscar questões não respondidas corretamente, agrupadas por nível
+    questions_by_level = {}
+    for level in range(1, 6):  # Níveis de 1 a 5
+        level_questions = Question.query.filter(
+            Question.category_id.in_(category_ids),
+            ~Question.id.in_(answered_correctly),
+            Question.level == level
+        ).all()
+        if level_questions:
+            questions_by_level[level] = level_questions
 
-    selected_questions = random.sample(questions_query, min(quantity, len(questions_query)))
+    # Selecionar questões de forma distribuída entre os níveis
+    selected_questions = []
+    questions_per_level = quantity // len(questions_by_level) if questions_by_level else 0
+    remaining_questions = quantity % len(questions_by_level) if questions_by_level else 0
+
+    # Primeiro, seleciona questões de cada nível
+    for level, questions in questions_by_level.items():
+        if questions_per_level > 0:
+            # Seleciona questões aleatórias deste nível
+            level_selected = random.sample(questions, min(questions_per_level, len(questions)))
+            selected_questions.extend(level_selected)
+
+    # Se ainda precisamos de mais questões, preenche com questões aleatórias
+    if remaining_questions > 0:
+        all_remaining = [q for questions in questions_by_level.values() for q in questions]
+        if all_remaining:
+            additional = random.sample(all_remaining, min(remaining_questions, len(all_remaining)))
+            selected_questions.extend(additional)
 
     # Garante que o campo 'correct' está presente nas opções
     return jsonify([q.to_dict(True) for q in selected_questions]), 200

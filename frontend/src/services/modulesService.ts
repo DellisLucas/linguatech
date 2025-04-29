@@ -41,9 +41,19 @@ export interface ModuleDetail extends Module {
 // Fetch all available modules
 export const getModules = async (): Promise<Module[]> => {
   try {
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+      throw new Error('User not authenticated');
+    }
+    
     const url = `${API_BASE_URL}/modules`;
     
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
     
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
@@ -58,9 +68,19 @@ export const getModules = async (): Promise<Module[]> => {
 // Fetch single module details
 export const fetchModuleDetails = async (moduleId: number): Promise<ModuleDetail> => {
   try {
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+      throw new Error('User not authenticated');
+    }
+    
     const url = `${API_BASE_URL}/modules/${moduleId}`;
     
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
     
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
@@ -75,9 +95,19 @@ export const fetchModuleDetails = async (moduleId: number): Promise<ModuleDetail
 // Fetch categories for a specific module
 export const fetchModuleCategories = async (moduleId: number): Promise<ModuleCategory[]> => {
   try {
+    const token = localStorage.getItem('token');
+    
+    if (!token) {
+      throw new Error('User not authenticated');
+    }
+    
     const url = `${API_BASE_URL}/modules/${moduleId}/categories`;
     
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
     
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
@@ -92,17 +122,27 @@ export const fetchModuleCategories = async (moduleId: number): Promise<ModuleCat
 // Fetch progress for a specific category
 export const fetchCategoryProgress = async (moduleId: number, categoryId: number): Promise<number> => {
   try {
+    const token = localStorage.getItem('token');
+    console.log('Token:', token);
+    
+    if (!token) {
+      console.error('No token found in localStorage');
+      return 0;
+    }
+    
     const response = await fetch(`${API_BASE_URL}/modules/${moduleId}/categories/${categoryId}/progress`, {
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${token}`
       }
     });
-
+    
     if (!response.ok) {
-      throw new Error('Failed to fetch category progress');
+      console.error('Error response:', response.status, response.statusText);
+      return 0;
     }
-
+    
     const data = await response.json();
+    console.log('Progress data:', data);
     return data.progress || 0;
   } catch (error) {
     console.error('Error fetching category progress:', error);

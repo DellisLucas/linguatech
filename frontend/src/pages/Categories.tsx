@@ -14,7 +14,6 @@ const Categories: React.FC = () => {
   const [module, setModule] = useState<ModuleDetail | null>(null);
   const [categories, setCategories] = useState<ModuleCategory[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selected, setSelected] = useState('');
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -120,53 +119,39 @@ const Categories: React.FC = () => {
           </div>
           
           <div className="mb-8">
-          <label className="block mb-2 text-sm font-medium text-gray-700">Escolha a quantidade de questões:</label>
-      <select
-        value={selected}
-        onChange={(e) => setSelected(e.target.value)}
-        className="border rounded px-4 py-2 w-full"
-      >
-        <option value="">Selecione</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-        <option value="20">20</option>
-        <option value="25">25</option>
-        <option value="30">30</option>
-      </select>
-      <Button
-  className="mt-5 bg-linguatech-blue hover:bg-blue-700 w-full"
-  onClick={async () => {
-    if (!selected || !moduleId) {
-      alert("Selecione a quantidade de questões.");
-      return;
-    }
+            <Button
+              className="mt-5 bg-linguatech-blue hover:bg-blue-700 w-full"
+              onClick={async () => {
+                if (!moduleId) {
+                  alert("Erro ao identificar o módulo.");
+                  return;
+                }
 
-    try {
-      const userId = Number(localStorage.getItem("user_id"));
-      const quantity = parseInt(selected);
+                try {
+                  const userId = Number(localStorage.getItem("user_id"));
+                  const quantity = 10; // Quantidade fixa de questões
 
-      const questions = await fetchQuestionsByLevel(
-        Number(moduleId),
-        userId,
-        quantity // agora não é mais necessário enviar o nível
-      );
+                  const questions = await fetchQuestionsByLevel(
+                    Number(moduleId),
+                    userId,
+                    quantity
+                  );
 
-      if (!questions || questions.length === 0) {
-        alert("Nenhuma pergunta encontrada para esse nível.");
-        return;
-      }
+                  if (!questions || questions.length === 0) {
+                    alert("Nenhuma pergunta encontrada para esse nível.");
+                    return;
+                  }
 
-      localStorage.setItem("quiz_questions", JSON.stringify(questions));
-      navigate(`/quiz/module/${moduleId}/custom`);
-    } catch (error) {
-      console.error("Erro ao buscar perguntas:", error);
-      alert("Erro ao buscar perguntas.");
-    }
-  }}
->
-  Iniciar Formulário
-</Button>
+                  localStorage.setItem("quiz_questions", JSON.stringify(questions));
+                  navigate(`/quiz/module/${moduleId}/custom`);
+                } catch (error) {
+                  console.error("Erro ao buscar perguntas:", error);
+                  alert("Erro ao buscar perguntas.");
+                }
+              }}
+            >
+              Iniciar Formulário
+            </Button>
 
             <h2 className="mt-10 text-2xl font-bold mb-6">Categorias</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

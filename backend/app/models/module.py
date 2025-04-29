@@ -18,18 +18,30 @@ class Module(db.Model):
         Retorna um dicionário com os dados do módulo,
         incluindo progresso do usuário (se fornecido) e categorias.
         """
-        from app.models.user_progress import UserProgress
+        from app.models.question import Question
+        from app.models.user_answer import UserAnswer
+        from app import db
 
         progress = 0
         if user_id:
-            progress_data = UserProgress.query.filter_by(
-                user_id=user_id,
-                module_id=self.id,
-                category_id=None  # Progresso geral do módulo
-            ).first()
-
-            if progress_data:
-                progress = progress_data.progress
+            # Calcula o progresso com base nas respostas do usuário
+            # Busca todas as questões das categorias deste módulo
+            category_ids = [category.id for category in self.categories]
+            if category_ids:
+                total_questions = Question.query.filter(Question.category_id.in_(category_ids)).count()
+                
+                if total_questions > 0:
+                    # Busca as questões que o usuário respondeu corretamente
+                    correct_answers = UserAnswer.query.filter(
+                        UserAnswer.user_id == user_id,
+                        UserAnswer.is_correct == True,
+                        UserAnswer.question_id.in_(
+                            db.session.query(Question.id).filter(Question.category_id.in_(category_ids))
+                        )
+                    ).count()
+                    
+                    # Calcula o progresso como porcentagem
+                    progress = round((correct_answers / total_questions) * 100)
 
         return {
             'id': self.id,

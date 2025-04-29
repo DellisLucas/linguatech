@@ -109,12 +109,6 @@ def evaluate_quiz(answers, user_id=None, module_id=None, category_id=None):
     else:
         feedback = "Continue praticando. A prática leva à perfeição!"
     
-    # Atualiza o progresso para cada categoria
-    if user_id:
-        for cat_id, progress in category_progress.items():
-            cat_percentage = round((progress['score'] / progress['total']) * 100)
-            update_user_progress(user_id, progress['module_id'], cat_id, cat_percentage)
-    
     # Commit para salvar todas as respostas
     if user_id:
         db.session.commit()
@@ -128,72 +122,12 @@ def evaluate_quiz(answers, user_id=None, module_id=None, category_id=None):
 
 def update_user_progress(user_id, module_id, category_id=None, percentage=0):
     """Atualiza o progresso do usuário para um módulo/categoria"""
-    progress = UserProgress.query.filter_by(
-        user_id=user_id,
-        module_id=module_id,
-        category_id=category_id
-    ).first()
-    
-    if progress:
-        # Calcula a nova média considerando o progresso atual e o novo
-        total_quizzes = progress.total_quizzes + 1
-        new_progress = ((progress.progress * progress.total_quizzes) + percentage) / total_quizzes
-        progress.progress = round(new_progress)
-        progress.total_quizzes = total_quizzes
-    else:
-        # Cria um novo registro de progresso
-        progress = UserProgress(
-            user_id=user_id,
-            module_id=module_id,
-            category_id=category_id,
-            progress=percentage,
-            total_quizzes=1
-        )
-        db.session.add(progress)
-    
-    db.session.commit()
-    
-    # Se foi um progresso de categoria, também atualiza o progresso do módulo
-    if category_id:
-        update_module_progress(user_id, module_id)
+    # Esta função agora não faz nada, pois não estamos mais usando a tabela user_progress
+    # O progresso é calculado diretamente quando necessário
+    pass
 
 def update_module_progress(user_id, module_id):
     """Atualiza o progresso geral do módulo com base nas categorias"""
-    # Encontra todas as categorias do módulo
-    categories = Category.query.filter_by(module_id=module_id).all()
-    
-    if not categories:
-        return
-    
-    # Calcula a média de progresso das categorias
-    total_progress = 0
-    for category in categories:
-        progress = UserProgress.query.filter_by(
-            user_id=user_id,
-            module_id=module_id,
-            category_id=category.id
-        ).first()
-        
-        total_progress += progress.progress if progress else 0
-    
-    average_progress = total_progress // len(categories)
-    
-    # Atualiza o progresso do módulo
-    module_progress = UserProgress.query.filter_by(
-        user_id=user_id,
-        module_id=module_id,
-        category_id=None
-    ).first()
-    
-    if module_progress:
-        module_progress.progress = average_progress
-    else:
-        module_progress = UserProgress(
-            user_id=user_id,
-            module_id=module_id,
-            category_id=None,
-            progress=average_progress
-        )
-        db.session.add(module_progress)
-    
-    db.session.commit()
+    # Esta função agora não faz nada, pois não estamos mais usando a tabela user_progress
+    # O progresso é calculado diretamente quando necessário
+    pass
