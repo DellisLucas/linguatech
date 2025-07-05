@@ -1,0 +1,1042 @@
+[
+    {
+      "question": "Como se diz 'reunião' em inglês no ambiente de trabalho?",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Report",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Meeting",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Review",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Task",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Qual é a tradução de 'database'?",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Computador",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Rede",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Banco de dados",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Servidor",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "O que significa 'password'?",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Usuário",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Senha",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Teclado",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Internet",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Como se traduz 'error message'?",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Mensagem de erro",
+          "is_correct": true
+        },
+        {
+          "option_id": "b",
+          "text": "Mensagem de texto",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "E-mail automático",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Código de acesso",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "'Firewall' significa:",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Vírus",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Proteção contra ameaças",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Conexão de rede",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Tipo de roteador",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "O que é 'backup'?",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Reiniciar o sistema",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Salvar uma cópia de segurança",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Apagar arquivos",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Atualizar software",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "'Login' significa:",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Fazer logout",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Nome do programa",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Acessar uma conta",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Instalar um sistema",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Qual o significado de 'bug' em programação?",
+      "level": 1,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Animal",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Linha de código",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Erro no sistema",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Janela pop-up",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Se o entrevistador perguntar “Tell me about your last project”, ele quer saber:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Sobre seu time atual",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Sobre seu projeto anterior",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Sobre sua graduação",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Sobre seu salário",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "O termo 'commit' no Git é usado para:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Apagar um arquivo",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Salvar alterações",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Fechar o sistema",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Criar uma nova conta",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Um técnico de help desk deve saber o que significa 'restart the system'. Isso quer dizer:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Desinstalar o sistema",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Reiniciar o sistema",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Atualizar a rede",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Fazer backup",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "'Phishing' é um termo relacionado a:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Compartilhamento de arquivos",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Ataques por e-mail falso",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Criação de senhas",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Monitoramento de rede",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Se um usuário pedir 'Can you ping the server?', ele quer:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Reiniciar o computador",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Verificar a conexão",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Apagar o histórico",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Fazer backup",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "'Bandwidth' se refere a:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Capacidade da internet",
+          "is_correct": true
+        },
+        {
+          "option_id": "b",
+          "text": "Modelo de placa-mãe",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Tipo de vírus",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Velocidade do HD",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Em uma reunião, 'agenda' significa:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Horário do almoço",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Cronograma da reunião",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Lista de compras",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "E-mail interno",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "“The connection is slow” quer dizer:",
+      "level": 2,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "A conexão está estável",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "A conexão está rápida",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "A conexão está lenta",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "A conexão está ausente",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "O entrevistador disse: “Can you work under pressure?” O que ele quer saber?",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Se você aceita salário menor",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Se você pode trabalhar com prazo apertado",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Se você quer férias",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Se você trabalha sozinho",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "“Merge conflict” no Git significa:",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Erro de programação",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Conflito ao unir dois códigos",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Permissão negada",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Falta de acesso",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Um técnico precisa aplicar um 'patch'. Isso significa:",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Instalar uma atualização",
+          "is_correct": true
+        },
+        {
+          "option_id": "b",
+          "text": "Reiniciar a máquina",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Excluir arquivos",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Mudar o idioma",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "“The system crashed during the backup process.” Isso indica:",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "O sistema funcionou bem",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "O backup terminou",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "O sistema falhou durante o backup",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "O sistema está atualizando",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Qual frase pode indicar uma tentativa de ataque?",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "The password was changed by admin.",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Unusual login from unknown IP.",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "The user requested access.",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "The system is updating.",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Quando alguém diz “You need to configure the router”, o que deve ser feito?",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Reiniciar a rede",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Instalar o antivírus",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Acessar as configurações do roteador",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Ligar o computador",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "“He’s responsible for deploying the application.” Significa que ele:",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Usa o aplicativo",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Cria banco de dados",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Publica o aplicativo",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Apaga o sistema",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Latency issues are affecting performance. Significa:",
+      "level": 3,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "O desempenho está bom",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Problemas de latência estão prejudicando o desempenho",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "O banco está cheio",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "A rede foi reiniciada",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "What does 'scalability' mean in software systems?",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "The ability to crash",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "The ability to expand and handle growth",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "The process of logging errors",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "A method of testing code",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Traduza a frase: 'We need to troubleshoot the connectivity issue.'",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Precisamos atualizar o software",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Precisamos verificar o roteador",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Precisamos resolver o problema de conexão",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Precisamos acessar o banco de dados",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "What is the purpose of an API key?",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "To unlock hardware components",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "To secure and identify API requests",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "To encrypt a database",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "To configure firewalls",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Traduza: 'He deployed the new build to the production environment.'",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ele testou a versão nova localmente",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Ele instalou o novo software na máquina dele",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Ele publicou a nova versão no ambiente de produção",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Ele atualizou o servidor de testes",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Which term refers to disguising communication as a trusted source?",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Spoofing",
+          "is_correct": true
+        },
+        {
+          "option_id": "b",
+          "text": "Tunneling",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Firewalling",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Routing",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Traduza: 'This port is closed by the firewall for security reasons.'",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Este cabo está desconectado da rede",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Este servidor está com erro",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Essa porta está fechada pelo firewall por segurança",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Esse IP está bloqueado pelo DNS",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "What does 'redundancy' mean in network infrastructure?",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Unnecessary software",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Duplicated systems to ensure availability",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "Weak network points",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Old configurations",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Traduza: 'She granted user access to the internal database.'",
+      "level": 4,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Ela bloqueou o acesso de usuário ao sistema",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Ela negou acesso externo ao sistema",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Ela concedeu acesso de usuário ao banco de dados interno",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "Ela mudou a senha do sistema",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "What does the phrase 'Let's circle back to that topic later' imply in a meeting?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "We will discuss it now",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Let's ignore it",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "We'll return to the topic later",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "It's not important",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "In development, what does 'refactoring' mean?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Rewriting code to improve its structure without changing behavior",
+          "is_correct": true
+        },
+        {
+          "option_id": "b",
+          "text": "Creating a new application",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Removing all functions",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Deleting unused files",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Which of these best defines a 'zero-day vulnerability'?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "An outdated antivirus signature",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "A firewall misconfiguration",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "A security flaw with no known fix yet",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "An expired SSL certificate",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "What is meant by 'the server is under a DDoS attack'?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "The server is updating",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Multiple systems are overwhelming it with requests",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "A hacker stole data",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "The server was reformatted",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "What does it mean if a network has 'high latency'?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "It has fast response times",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "It is extremely secure",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "It takes longer for data to travel",
+          "is_correct": true
+        },
+        {
+          "option_id": "d",
+          "text": "It has a weak firewall",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "In support, what does the expression 'escalate the issue' mean?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "Fix it immediately",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "Assign it to a junior agent",
+          "is_correct": false
+        },
+        {
+          "option_id": "c",
+          "text": "Ignore the issue",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "Send it to a higher support level",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "What is a 'hotfix'?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "A permanent update with new features",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "A quick solution to fix a critical bug",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "A rollback to a previous version",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "A hardware upgrade",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "If a switch has a 'broadcast storm', what is likely happening?",
+      "level": 5,
+      "options": [
+        {
+          "option_id": "a",
+          "text": "It is powering off",
+          "is_correct": false
+        },
+        {
+          "option_id": "b",
+          "text": "It is sending unnecessary messages to all devices",
+          "is_correct": true
+        },
+        {
+          "option_id": "c",
+          "text": "It is disconnected",
+          "is_correct": false
+        },
+        {
+          "option_id": "d",
+          "text": "It is performing a firmware update",
+          "is_correct": false
+        }
+      ]
+    }
+  ]

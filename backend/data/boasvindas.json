@@ -1,0 +1,727 @@
+[
+  {
+    "question": "Como se diz 'banco de dados' em inglês?",
+    "level": 1,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Database",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Firewall",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Monitor",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Switch",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual palavra significa 'consulta' em banco de dados?",
+    "level": 2,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Query",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Password",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Backup",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Cable",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "What is a 'primary key' used for?",
+    "level": 3,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Unique identification",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Changing password",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Network configuration",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Screen sharing",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual é a tradução de 'reunião'?",
+    "level": 1,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Meeting",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Schedule",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Support",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Printer",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Como cumprimentar uma equipe no começo de uma reunião?",
+    "level": 2,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Good morning, everyone.",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Please reboot the system.",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Close the network.",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Update the server.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "During a job interview, the recruiter says: 'Tell me about yourself.' What should you do?",
+    "level": 3,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Talk about your background and skills",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Request a Wi-Fi password",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Ask about printer issues",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Complain about traffic",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual é a tradução correta para 'senha'?",
+    "level": 1,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Password",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Gateway",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Link",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Cable",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Por que mudar senhas regularmente?",
+    "level": 2,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "To protect accounts from attacks",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "To print faster",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "To create new networks",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "To reboot the router",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "A user reports: 'I received a suspicious email asking for my password.' What should you advise?",
+    "level": 3,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Do not share information and report the email",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Send the password",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Ignore and delete it",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Reset the router",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Como se diz 'suporte' em inglês?",
+    "level": 1,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Support",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Cable",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Server",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Router",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual é a primeira ação se um computador não liga?",
+    "level": 2,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Check if it is connected to power",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Change network cable",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Update antivirus",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Replace monitor",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "The user says: 'My internet is not working.' What would you check first?",
+    "level": 3,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "If the cables and router are connected properly",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "If the password is updated",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "If the monitor is off",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "If the firewall is locked",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Como se chama uma rede sem fio em inglês?",
+    "level": 1,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Wi-Fi",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Firewall",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Router",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Monitor",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "Qual equipamento conecta vários dispositivos em uma rede local?",
+    "level": 2,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Switch",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Printer",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Keyboard",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Cable",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "You need to connect a PC to the internet. Which device should you use?",
+    "level": 3,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Router",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Monitor",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Switch",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Firewall",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "A client reported that the query results are taking too long to load. What is the best action?",
+    "level": 4,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Optimize indexes",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Replace the keyboard",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Update the screen driver",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Move files to USB",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "In a meeting, your manager says: 'Let’s align on the deliverables before EOD.' What does 'EOD' mean?",
+    "level": 4,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "End of day",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Error on delivery",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Every other day",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Estimated objective delivery",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "You receive a system alert: 'Unauthorized access attempt detected.' What should you do first?",
+    "level": 4,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Notify the security team",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Update the browser",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Print the logs",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Delete user profile",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "The user says: 'My screen froze after clicking the application icon.' What’s your best response?",
+    "level": 4,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Force close and relaunch the app",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Restart the printer",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Update the website",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Replace the keyboard",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "You are asked to troubleshoot a device not obtaining an IP address. What is your first step?",
+    "level": 4,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Check DHCP configuration",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Restart the monitor",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Remove user access",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Reset password",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "While reviewing logs, a developer finds: 'Deadlock encountered during transaction.' What does it mean?",
+    "level": 5,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Two processes are blocking each other",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "A password was rejected",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Database backup failed",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Connection timed out",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "The interviewer asks: 'Can you walk me through a challenging project you handled?' You should:",
+    "level": 5,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Describe the problem, your actions, and the results",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Say you never had issues",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Talk about your hobbies",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Explain your resume again",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "A phishing attempt was reported by a colleague. How should you escalate this internally?",
+    "level": 5,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Follow the incident response protocol",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Ignore and delete the email",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Forward it to coworkers",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Reply asking for clarification",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "A ticket says: 'User can't access shared folder on VPN.' What's a likely cause?",
+    "level": 5,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Incorrect network permissions",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Broken power cable",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Monitor resolution issue",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Wrong keyboard layout",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question": "A user is unable to connect to Wi-Fi after moving to a different office floor. What’s the likely issue?",
+    "level": 5,
+    "explanation": "BV",
+    "module_title": "Desenvolvedores e Banco de Dados",
+    "category_name": "",
+    "options": [
+      {
+        "option_id": "a",
+        "text": "Signal coverage or roaming settings",
+        "is_correct": true
+      },
+      {
+        "option_id": "b",
+        "text": "Incorrect email configuration",
+        "is_correct": false
+      },
+      {
+        "option_id": "c",
+        "text": "Outdated antivirus",
+        "is_correct": false
+      },
+      {
+        "option_id": "d",
+        "text": "Disabled screensaver",
+        "is_correct": false
+      }
+    ]
+  }
+]
