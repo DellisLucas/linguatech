@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import Navbar from "@/components/Navbar_Login";
 import { registerUser } from "@/services";
 import { toast } from "sonner";
 
@@ -87,10 +88,12 @@ const Register = () => {
   };
 
   return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
     <div className="flex items-center justify-center min-h-screen bg-gray-50">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold text-center">Registre-se</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">Register</CardTitle>
         </CardHeader>
         <CardContent>
           {error && (
@@ -152,6 +155,7 @@ const Register = () => {
           </p>
         </CardFooter>
       </Card>
+    </div>
     </div>
   );
 };
